@@ -1,0 +1,63 @@
+{% extends "shop/base.html" %}
+
+{% block content %}
+<body style="background:#19bedb;">
+<div style="background:#3ab35e9d;">
+<div class="row">
+    <div class="col-md-12">
+        <h3 class="text-dark text-center bg-warning" class="text-center" >Salut Mr/Mrs {{ name }} </h3>
+        <h4>Merci de nous faire confiance Mr/Mrs {{ name }}. Nous avons reçu votre demande de reservation, un de nos agents vous attendra dans votre residence pour finaliser l'opération</h4>
+    </div>
+</div>
+
+<br>
+<br>
+
+<div class="col-sm-8">
+    <div class="card shadow">
+      <div  class="card-body" style="background:#abc4ce;">
+
+        <div style="position:absolute; top:45px; left:520px" class="col-2">
+            <img src="https://static.wixstatic.com/media/0e39db_76bee45d39024536b8f9238e0ecf99b5~mv2.jpg"  width="150px" height="150px" alt="logo">
+       </div>
+
+        <h3><b><u>INFORMATIONS DE RESERVATION</u></b></h3>
+        <br>
+        <h4>Date de la commande : {{date_commande}} </h4>
+        <br>
+        <h4>Nom du client : {{ name }} </h4>
+        <h4>E-mails du client : {{email}} </h4>
+        <h4>Adresse du client: {{address}}</h4>
+        <h4>Ville du client: {{ville}} </h4>
+        <h4>Pays du client: {{pays}} </h4>
+        <br>
+        <h4>Reservation du client: {{items}} </h4>
+        <h4>Total à payer: {{total}} </h4>
+        <h4>Durée du séjour : 1 mois</h4>
+        <br>
+        <h4>Mot de passe(à ne pas oublier): {{zipcode}} </h4>
+        <br>
+        <h4 class="btn btn-success">COMMANDE(S) ENREIGISTREE(S) AVEC SUCCES</h4>
+      </div>
+    </div> 
+    <div class="card shadow">
+      <div  class="card-body" style="background:#5c4872;">
+            
+      </div>
+    </div>   
+</div>
+<br>
+<h3>Merci d'avoir fait confiance à "Habitat Online" la meilleure plateforme de location de logement</h3>
+<br>
+<br>
+<button class="btn btn-success" onclick="generatePDF()">Formulaire de reservation</button>
+<br>
+<br>
+<button class="btn btn-success" onclick="window.location.href='https://products.groupdocs.app/fr/conversion/html-to-docx'">Conversion en document</button>
+<br>
+<br>
+</div>
+</body>
+
+
+{% endblock %}
